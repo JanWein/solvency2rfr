@@ -1,0 +1,26 @@
+{
+  "permission": {
+    "executeCode": {
+      "*": "allow"
+    },
+    "edit": {
+      "*/DESCRIPTION": "allow",
+      "*/LICENSE": "allow",
+      "*.md": "allow",
+      "*.R": "allow",
+      "*": "allow",
+      "*/.Rbuildignore": "allow",
+      "*/.gitignore": "allow"
+    },
+    "bash": {
+      "cd *": "allow",
+      "\"/c/Users/1003177/AppData/Local/Programs/R/R-4.5.1/bin/R\" *": "allow",
+      "\\ *": "allow",
+      "git remote *": "allow",
+      "*": "allow"
+    },
+    "read": {
+      "*/.gitignore": "allow"
+    }
+  }
+}
