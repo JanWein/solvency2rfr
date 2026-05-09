@@ -1,0 +1,86 @@
+CRAN SUBMISSION COMMENTS FOR solvency2rfr 0.1.0
+================================================
+
+Dear CRAN Team,
+
+I am submitting solvency2rfr version 0.1.0 for publication on CRAN.
+
+PACKAGE OVERVIEW
+================
+
+solvency2rfr provides tidy access to the monthly risk-free interest rate (RFR)
+term structures published by the European Insurance and Occupational Pensions
+Authority (EIOPA). These curves are essential inputs for calculating Solvency II
+technical provisions across the European Economic Area.
+
+The package downloads data from EIOPA's official RSS feed (https://www.eiopa.europa.eu/feed/53/rss_en),
+extracts ZIP-archived Excel files, and returns data as clean, normalized tibbles
+suitable for further analysis.
+
+KEY FEATURES
+============
+
+- rfr_index(): List all available publications with reference dates and URLs
+- rfr_term_structures(): Download and parse term structures for specific dates
+- Multiple curve types: spot_no_VA, spot_with_VA, and four stress scenarios
+- Clean, reproducible R code with roxygen2 documentation
+- 25 passing unit tests (testthat)
+- Comprehensive vignette with examples
+- GitHub Actions CI workflow (5 platform/R-version combinations)
+
+DEPENDENCIES
+============
+
+All dependencies are on CRAN:
+- httr2 (>= 1.0.0): Modern HTTP client for downloading EIOPA files
+- readxl (>= 1.4.0): Parse Excel files from EIOPA ZIP archives
+- tibble (>= 3.2.0): Tidy tibble data structure
+- xml2 (>= 1.3.0): Parse EIOPA RSS feed
+
+Suggests: knitr, rmarkdown, testthat, withr
+
+No external system dependencies required (vignette pre-built in inst/doc/).
+
+CRAN CHECK REPORT
+=================
+
+Status: 1 WARNING, 2 NOTEs (no ERRORs)
+
+1. WARNING: 'qpdf' is needed for checks on size reduction of PDFs
+   - 'qpdf' is a standard system tool available on CRAN check servers
+   - Expected behavior; not a blocker for publication
+
+2. NOTE: Files 'README.md' or 'NEWS.md' cannot be checked without 'pandoc'
+   - 'pandoc' is available on CRAN check servers
+   - Expected behavior for initial submission
+
+3. NOTE: New submission
+   - Expected behavior for first release
+
+TESTING
+=======
+
+- Local: R 4.5.1 on Windows 11 → 0 errors, 1 warning, 2 notes
+- CI: GitHub Actions tests across ubuntu/windows/macOS × R devel/release/oldrel-1
+  (automated on every push to main branch)
+
+REVERSE DEPENDENCIES
+====================
+
+This is a new package. No reverse dependencies.
+
+NOTES FOR MAINTAINERS
+=====================
+
+- Vignette is pre-built in inst/doc/ to avoid network access during checks
+- renv is disabled in CI (RENV_CONFIG_ACTIVE=false) to use public repositories
+- The package does not require renv for normal use; renv.lock uses official CRAN mirror
+- GitHub repository: https://github.com/JanWein/solvency2rfr
+
+The package is ready for CRAN publication.
+
+Best regards,
+
+Jan-Hendrik Weinert
+janhendrikweinert@gmail.com
+ORCID: 0009-0005-2071-6502
