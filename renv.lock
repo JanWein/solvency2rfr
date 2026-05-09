@@ -4,7 +4,7 @@
     "Repositories": [
       {
         "Name": "CRAN",
-        "URL": "https://packagemanager.vgp.dom/cran/latest"
+        "URL": "https://cran.r-project.org"
       }
     ]
   },
