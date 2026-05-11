@@ -1,9 +1,9 @@
 Package: solvency2rfr
-Title: EIOPA Risk-Free Interest Rate Term Structures for Solvency II
+Title: 'EIOPA' Risk-Free Interest Rate Term Structures for Solvency II
 Version: 0.1.0
 Authors@R: person("Jan-Hendrik", "Weinert", email = "janhendrikweinert@gmail.com",
     role = c("aut", "cre"), comment = c(ORCID = "0009-0005-2071-6502"))
-Description: Downloads and parses the risk-free interest rate (RFR) term
+Description: Downloads and parses the risk-free interest rate ('RFR') term
     structures published monthly by the European Insurance and Occupational
     Pensions Authority ('EIOPA') for Solvency II calculations. Provides a
     tidy data frame interface to the data, accessed via the official 'EIOPA'
