@@ -5,8 +5,8 @@ Authors@R: person("Jan-Hendrik", "Weinert", email = "janhendrikweinert@gmail.com
     role = c("aut", "cre"), comment = c(ORCID = "0009-0005-2071-6502"))
 Description: Downloads and parses the risk-free interest rate (RFR) term
     structures published monthly by the European Insurance and Occupational
-    Pensions Authority (EIOPA) for Solvency II calculations. Provides a
-    tidy tibble interface to the data, accessed via the official EIOPA RSS
+    Pensions Authority ('EIOPA') for Solvency II calculations. Provides a
+    tidy data frame interface to the data, accessed via the official 'EIOPA'
     feed at <https://www.eiopa.europa.eu/feed/53/rss_en>.
 Depends: R (>= 4.1.0)
 License: MIT + file LICENSE
@@ -27,4 +27,3 @@ Suggests:
     testthat (>= 3.0.0),
     withr
 Config/testthat/edition: 3
-VignetteBuilder: knitr
